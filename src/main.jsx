@@ -148,7 +148,7 @@ function App() {
         </button>
         <nav id="navigation" className={menu ? "open" : ""}>
           <a href="#approche" onClick={() => setMenu(false)}>
-            L’approche
+            Michel
           </a>
           <a href="#pratiques" onClick={() => setMenu(false)}>
             Les pratiques
@@ -169,7 +169,7 @@ function App() {
         <section className="hero">
           <div className="hero-copy">
             <p className="eyebrow">
-              <span /> MAGNÉTISME & PRATIQUES ÉNERGÉTIQUES
+              <span /> MICHEL · MAGNÉTISME À MONTPELLIER
             </p>
             <h1>
               Revenir à soi.
@@ -189,7 +189,7 @@ function App() {
               Faire le premier pas <ArrowUpRight size={18} />
             </a>
             <span className="hero-note">
-              À votre rythme. En toute simplicité.
+              À Montpellier, chez le praticien · À distance · Sur rendez-vous
             </span>
           </div>
           <div className="orb-scene" aria-hidden="true">
@@ -215,17 +215,18 @@ function App() {
         </section>
         <section id="approche" className="approach section reveal">
           <div>
-            <p className="eyebrow">01 — L’APPROCHE</p>
+            <p className="eyebrow">01 — MICHEL · PRÉSENCE</p>
             <h2>
-              Moins de bruit.
+              Une rencontre.
               <br />
-              <em>Plus de présence.</em>
+              <em>Une présence.</em>
             </h2>
           </div>
           <div className="approach-text">
             <p className="lead">
-              Parfois, on a simplement besoin d’un espace pour souffler. D’être
-              écouté, sans jugement. De prendre du temps pour soi.
+              Je suis Michel, praticien en magnétisme et pratiques énergétiques
+              à Montpellier. Présence est le nom de mon activité : un espace
+              d’écoute, de calme et d’accompagnement spirituel.
             </p>
             <p>
               Ma pratique réunit le magnétisme, les approches énergétiques et
@@ -234,15 +235,16 @@ function App() {
               démarche proposée.
             </p>
             <p>
-              Vous restez libre à chaque étape. Rien n’est imposé : ni une
-              croyance, ni une interprétation, ni un nombre de séances.
+              Je vous reçois à mon domicile à Montpellier, uniquement sur
+              rendez-vous, et je propose également des séances à distance.
+              Nous convenons ensemble des modalités avant toute séance.
             </p>
             <div className="small-values">
               <span>
                 <Check size={15} /> Une écoute attentive
               </span>
               <span>
-                <Check size={15} /> Le respect de vos choix
+                <Check size={15} /> Sur place ou à distance
               </span>
             </div>
           </div>
@@ -346,7 +348,7 @@ function App() {
             ))}
           </div>
           <p className="caption gallery-foot">
-            Photographies fournies par le praticien · Cliquez sur une image pour
+            Photographies fournies par Michel · Cliquez sur une image pour
             la consulter en entier.
           </p>
         </section>
@@ -426,9 +428,30 @@ function App() {
               Comment connaître les tarifs et les modalités ?<Plus size={18} />
             </summary>
             <p>
-              Les tarifs, la durée et le lieu seront précisés avant toute prise
-              de rendez-vous. Vous pourrez ainsi décider en connaissance de
-              cause.
+              Les tarifs et la durée sont précisés lors de notre premier échange,
+              avant toute confirmation. Vous choisissez librement de poursuivre
+              ou non.
+            </p>
+          </details>
+          <details>
+            <summary>
+              Où ont lieu les séances à Montpellier ?<Plus size={18} />
+            </summary>
+            <p>
+              Je vous accueille à mon domicile à Montpellier, sur rendez-vous.
+              L’adresse précise vous est communiquée personnellement lors de
+              l’organisation de la séance. Il ne s’agit pas d’un déplacement
+              à votre domicile.
+            </p>
+          </details>
+          <details>
+            <summary>
+              Comment organiser une séance à distance ?<Plus size={18} />
+            </summary>
+            <p>
+              Indiquez votre préférence dans votre message. Nous échangeons
+              d’abord sur votre demande, puis convenons du créneau, du
+              déroulement et des modalités pratiques de la séance à distance.
             </p>
           </details>
         </section>
@@ -442,7 +465,13 @@ function App() {
             </h2>
             <p>
               Une question, une envie d’en savoir plus ?<br />
-              Laissez-moi quelques mots.
+              À Montpellier, chez moi sur rendez-vous, ou à distance.
+            </p>
+            <p>
+              Vous préférez écrire directement ?<br />
+              <a href="mailto:presencecontactmft@gmail.com">
+                presencecontactmft@gmail.com
+              </a>
             </p>
             <div className="contact-note">
               <span className="tiny-orbit" aria-hidden="true" />
@@ -534,7 +563,7 @@ function App() {
         <a className="brand" href="#">
           ◌ présence.
         </a>
-        <p>Magnétisme & pratiques énergétiques</p>
+        <p>Michel · Magnétisme à Montpellier & à distance</p>
         <a
           href="#informations"
           onClick={(e) => {
@@ -586,9 +615,9 @@ function App() {
         </button>
         <h2>Informations du site</h2>
         <p>
-          Présence est un nom de travail. L’identité de l’éditeur, ses
-          coordonnées professionnelles, les informations d’immatriculation et
-          l’hébergeur seront à compléter avant ouverture commerciale.
+          Présence est l’activité de Michel, praticien à Montpellier.
+          Les informations complètes d’identification de l’éditeur,
+          d’immatriculation et d’hébergement restent à compléter.
         </p>
         <h3>Vos données</h3>
         <p>
