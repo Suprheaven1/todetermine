@@ -10,6 +10,10 @@ import {
   Check,
 } from "lucide-react";
 import "./style.css";
+
+const CONTACT_ENDPOINT =
+  import.meta.env.VITE_CONTACT_ENDPOINT?.trim() ||
+  "https://formspree.io/f/mppdodyd";
 const practices = [
   [
     "Magnétisme",
@@ -94,14 +98,15 @@ function App() {
   }, []);
   async function submit(e) {
     e.preventDefault();
-    const endpoint = import.meta.env.VITE_CONTACT_ENDPOINT;
+    const endpoint = CONTACT_ENDPOINT;
     if (!endpoint) {
       setStatus(
         "L’adresse de réception est en cours de configuration. Votre message n’a pas été envoyé.",
       );
       return;
     }
-    const data = new FormData(e.target);
+    const form = e.currentTarget;
+    const data = new FormData(form);
     if (data.get("website")) return;
     setSending(true);
     setStatus("");
@@ -113,7 +118,7 @@ function App() {
       });
       if (!response.ok) throw Error();
       setStatus("Merci. Votre message a bien été transmis.");
-      e.target.reset();
+      form.reset();
     } catch {
       setStatus(
         "Le message n’a pas pu être envoyé. Veuillez réessayer plus tard.",
@@ -512,7 +517,7 @@ function App() {
             </button>
             <p className="form-status" role="status">
               {status ||
-                "Formulaire en préparation : l’adresse de réception reste à définir."}
+                "Votre message sera transmis via Formspree pour répondre à votre demande."}
             </p>
           </form>
         </section>
@@ -587,11 +592,12 @@ function App() {
         </p>
         <h3>Vos données</h3>
         <p>
-          Dans cette version, le formulaire ne transmet aucune donnée tant qu’un
-          service de réception n’est pas configuré. Aucun outil publicitaire ou
-          de mesure d’audience n’est installé. Après configuration du contact,
-          les informations sur le prestataire, la conservation et l’exercice de
-          vos droits devront être complétées.
+          Les informations du formulaire sont transmises à Formspree afin de
+          traiter votre demande et de l’acheminer vers
+          presencecontactmft@gmail.com. Merci de ne pas transmettre de données
+          de santé. Aucun outil publicitaire ou de mesure d’audience n’est
+          installé. Les modalités de conservation et d’exercice de vos droits
+          restent à préciser avant l’ouverture commerciale.
         </p>
       </dialog>
     </>
