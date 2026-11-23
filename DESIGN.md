@@ -1,6 +1,6 @@
 # Overview
 
-Présence est une identité de travail pour une pratique de bien-être énergétique. Direction : nuit contemplative, composition éditoriale et halo orbital. Aucune promesse de guérison. Les visuels fournis illustrent une pratique, pas une efficacité médicale.
+Présence est le nom de l’activité de Michel, praticien en magnétisme et pratiques énergétiques à Montpellier. Séances à son domicile sur rendez-vous ou à distance. Le masculin est utilisé. Aucune adresse personnelle précise n’est publiée. Direction : nuit contemplative, composition éditoriale et halo orbital. Aucune promesse de guérison. Les visuels fournis illustrent une pratique, pas une efficacité médicale.
 
 # Colors
 
