@@ -1,6 +1,6 @@
 # Présence — magnétisme & pratiques énergétiques
 
-Site vitrine React + Vite, en français. **Présence est un nom provisoire.** Palette bleu nuit / mauve, animation orbitale CSS, six pratiques dépliantes, six photographies fournies, galerie modale, FAQ et formulaire de contact sans téléphone.
+Site vitrine React + Vite, en français. **Présence est l’activité de Michel, praticien à Montpellier.** Séances au domicile du praticien sur rendez-vous ou à distance. L’adresse personnelle n’est pas publiée. Palette bleu nuit / mauve, animation orbitale CSS, six pratiques dépliantes, six photographies fournies, galerie modale, FAQ et formulaire de contact sans téléphone.
 
 ## Démarrage
 
@@ -24,13 +24,11 @@ Le workflow `.github/workflows/pages.yml` compile et publie lors d'un push sur `
 
 ## Configurer le contact
 
-Aucun destinataire fictif n'est utilisé et aucun message n'est envoyé dans la configuration initiale. Un statut explicite le confirme. Le formulaire contrôle prénom, e-mail, message et accord de traitement. Aucun numéro de téléphone n'est demandé.
+Le formulaire utilise par défaut l’URL Formspree fournie par le propriétaire : `https://formspree.io/f/mppdodyd`. La réception prévue est `presencecontactmft@gmail.com`, à vérifier dans le tableau de bord Formspree. Aucun fichier `.env.local` n’est nécessaire pour utiliser cette configuration. Le lien e-mail direct constitue une autre possibilité de contact.
 
-1. Choisir l'adresse e-mail professionnelle et un prestataire de formulaires acceptant les requêtes POST `FormData` avec réponse JSON et CORS (par exemple Formspree), ou créer son propre endpoint.
-2. Configurer et vérifier l'adresse destinataire chez ce prestataire.
-3. En local, copier `.env.example` en `.env.local`, puis renseigner `VITE_CONTACT_ENDPOINT` avec l'URL HTTPS du formulaire.
-4. Pour GitHub Pages, définir la variable du dépôt `VITE_CONTACT_ENDPOINT` dans Settings → Secrets and variables → Actions → Variables, puis relancer le workflow.
-5. Vérifier la réception réelle d'un message et compléter la notice de confidentialité : prestataire, finalité, durée de conservation, droits et contact.
+La variable `VITE_CONTACT_ENDPOINT` permet de remplacer cette URL : en local dans `.env.local`, ou pour GitHub Pages dans Settings → Secrets and variables → Actions → Variables. Redémarrer Vite après un changement local; relancer le workflow après un changement de variable GitHub.
+
+Vérifier la réception réelle d’un message et compléter la notice de confidentialité (prestataire, conservation et droits) avant ouverture commerciale.
 
 `VITE_` est public dans le navigateur : ne jamais y mettre de clé API secrète. Le serveur choisi doit gérer validation, anti-spam et limitation de débit; le honeypot côté interface ne suffit pas à lui seul. Une réponse HTTP réussie confirme l'acceptation du prestataire, pas la livraison définitive de l'e-mail.
 
@@ -40,7 +38,7 @@ PHP ne change pas la qualité du design et n'est pas exécuté par GitHub Pages.
 
 ## Personnaliser avant ouverture commerciale
 
-- Remplacer le nom provisoire dans `index.html`, `src/main.jsx` et `DESIGN.md`.
+- Compléter le parcours réel de Michel et une photographie autorisée si souhaité. Ne pas inventer de formation, certification ou ancienneté.
 - Compléter identité professionnelle, mentions de l'éditeur et de l'hébergeur, modalités, tarifs et confidentialité. La fenêtre actuelle signale honnêtement les éléments manquants; elle n'est pas une page juridique finalisée.
 - Confirmer l'autorisation de publier chaque photographie.
 - Les captures sont présentées comme illustrations logicielles, sans diagnostic, garantie ou preuve de guérison. Aucun avant/après n'est inventé.
@@ -64,3 +62,7 @@ playwright-cli screenshot
 Contrôler : absence de débordement horizontal, menu mobile, dépliants, agrandissement et fermeture clavier des images, champs obligatoires et message explicite sans endpoint. Refaire les contrôles sur la version compilée (`npm run preview`, port indiqué par Vite).
 
 Polissage appliqué : halo lent au lieu de symboles inquiétants; pratiques en liste éditoriale plutôt qu'en cartes répétitives; zone contact ivoire pour créer une respiration et faciliter la lecture.
+
+## Communication locale
+
+Les titres, la description et les métadonnées de partage mentionnent Michel, Présence et Montpellier. Les données structurées décrivent une activité, sans adresse personnelle, avis, tarifs ou qualifications inventés. Cela prépare la compréhension du site; aucun classement Google ni indexation n’est garanti. Le kit de textes prêts à adapter se trouve dans `docs/lancement.md`. Aucun de ces textes n’a été publié sur un réseau social ou envoyé à un tiers.
